@@ -5,8 +5,10 @@ MAINTAINER Sergii Kusii <kusii.sergii@apriorit.com>
 # REQUIREMENTS
 RUN dnf -yqq update
 RUN dnf -yqq install 'dnf-command(builddep)'
-RUN dnf -yqq install libtool m4 automake
-RUN dnf -yqq  builddep libguestfs 
+RUN dnf -y install libtool 
+RUN dnf -y install m4
+RUN dnf -y install automake
+RUN dnf -yqq builddep libguestfs 
 RUN dnf -yqq builddep libldm libcap libvirt libselinux fuse gdisk acl
 RUN dnf -yqq install make
 RUN dnf -yqq install texinfo
