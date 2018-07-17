@@ -14,6 +14,9 @@ RUN dnf -yqq install make
 RUN dnf -yqq install texinfo
 RUN dnf -yqq install autoconf automake bc gettext git gperf gzip perl rsync tar  
 
+# Fix problem with get info for some binary files
+RUN dnf -yqq install file-5.32-3.fc28
+
 #BUILDING FROM GIT
 #COPY ./install_libquestfs_fedora.sh /app/install_libquestfs_fedora.sh
 #RUN chmod +x /app/install_libquestfs_fedora.sh 
